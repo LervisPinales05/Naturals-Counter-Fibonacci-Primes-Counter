@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lervis
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var ContadorFibo = Fibo();
+            foreach (int item in ContadorFibo)
+            {
+                Console.WriteLine(item);
+            }
+     
+        }
+        private static IEnumerable<int> Fibo() 
+        {
+            int x = 1;
+            int y = 0;
+            int z =0;
+
+            for (int i = 2; i < 30; i++)
+            {
+                z = x;
+                x = y;
+                y = z + x;
+                yield return x;
+                
+            }
+        }
+    }
+}

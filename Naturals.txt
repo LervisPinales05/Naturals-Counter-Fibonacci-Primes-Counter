@@ -1,0 +1,29 @@
+using System;
+
+namespace Lervis
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var ContadorNaturales = Naturales();
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+            Console.WriteLine(ContadorNaturales());
+
+        }
+        private static Func <int> Naturales()
+        {
+            int x = 1;
+            return () => x++;
+        }
+    }
+}
